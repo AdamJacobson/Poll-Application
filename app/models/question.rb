@@ -15,6 +15,7 @@ class Question < ApplicationRecord
     through: :answer_choices,
     source: :responses
 
+    
   def results
     choices = self.answer_choices.includes(:responses)
 
